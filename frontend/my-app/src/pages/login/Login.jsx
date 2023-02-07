@@ -31,7 +31,7 @@ export default function Login() {
        
      });
      
-     let response = await fetch("http://localhost:8000/login", { 
+     let response = await fetch("https://backend-gwa2.onrender.com/login", { 
        method: "POST",
        body: bodyContent,
        headers: headersList
