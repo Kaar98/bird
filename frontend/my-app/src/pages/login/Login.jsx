@@ -49,7 +49,7 @@ export default function Login() {
       // console.log(response.data);
       localStorage.setItem('id',data);
       const id1=JSON.parse(localStorage.getItem('id'));
-      const res = await axios.get(`http://localhost:8000/${id1}/getUser`);
+      const res = await axios.get(`https://backend-gwa2.onrender.com/${id1}/getUser`);
       console.log(res.data);
       localStorage.setItem('loginUser',JSON.stringify(res.data));
       // console.log(localStorage.getItem('user'));
@@ -80,9 +80,10 @@ export default function Login() {
             <button className="loginButton" onClick={
               handleLogin
             }>Log In</button>
-            <button className="loginRegisterButton" onClick={ handleNewAccount}>
+            {/* <button className="loginRegisterButton" onClick={ handleNewAccount}>
               Create a New Account
-            </button>
+            </button> */}
+            <button type="button" className="btn btn-success" onClick={ handleNewAccount}>Create a New Account</button>
           </div>
         </div>
       </div>

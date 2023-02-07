@@ -32,7 +32,7 @@ export default function Register() {
        "cpassword":user.cpassword
      });
      
-     let response = await fetch("http://localhost:8000/register", { 
+     let response = await fetch("https://backend-gwa2.onrender.com/register", { 
        method: "POST",
        body: bodyContent,
        headers: headersList
@@ -74,9 +74,10 @@ export default function Register() {
             <button className="loginButton" onClick={(e)=>{
               handleClick(e);
             }}>Sign Up</button>
-            <button className="loginRegisterButton" onClick={handleLogin}>
+            {/* <button className="loginRegisterButton" onClick={handleLogin}>
               Log into Account
-            </button>
+            </button> */}
+            <button type="button" className="btn btn-success" onClick={handleLogin}>Log into Account</button>
           </form>
         </div>
       </div>
